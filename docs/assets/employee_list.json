@@ -1,0 +1,46 @@
+[  
+  {
+    "EmployeeName": "Ajay Singh",
+    "Status": "Active"
+  },
+  {
+    "EmployeeName": "Bhuvnesh",
+    "Status": "Active"
+  },
+  {
+    "EmployeeName": "Bihari Lal",
+    "Status": "Active"
+  },
+  {
+    "EmployeeName": "Bimal Singh",
+    "Status": "Active"
+  },
+  {
+    "EmployeeName": "Manoj Kumar",
+    "Status": "Active"
+  },
+  {
+    "EmployeeName": "Ravipratap Tomar",
+    "Status": "Active"
+  },
+  {
+    "EmployeeName": "Shubham Mishra",
+    "Status": "Active"
+  },
+  {
+    "EmployeeName": "Soumya Ranjan",
+    "Status": "Active"
+  },
+  {
+    "EmployeeName": "Supriya Kachroo",
+    "Status": "Active"
+  },
+  {
+    "EmployeeName": "Vikas Kumar",
+    "Status": "Active"
+  },
+  {
+    "EmployeeName": "Yogesh Kumar",
+    "Status": "Active"
+  }
+]

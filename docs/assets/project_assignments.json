@@ -1,0 +1,1001 @@
+[
+  {
+    "Project": "BC001076 - Singapore Micron_Domex",
+    "Project Lead": "Tushar Pandey",
+    "Activity Code": "04K6",
+    "Task": "040_General Arrangement",
+    "Resource": "Ajay Singh",
+    "Hours": 5,
+    "Date": "2026-01-02"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K6",
+    "Task": "040_Machine piping Plan",
+    "Resource": "Bimal Singh",
+    "Hours": 4,
+    "Date": "2026-01-02"
+  },
+  {
+    "Project": "BC0042-GCPL Bay City LMA N2",
+    "Project Lead": "Bimal Singh",
+    "Activity Code": "04K4",
+    "Task": "740_Process gas piping Support",
+    "Resource": "Manoj Kumar",
+    "Hours": 2,
+    "Date": "2026-01-02"
+  },
+  {
+    "Project": "BC001076 - Singapore Micron_Domex",
+    "Project Lead": "Rahul",
+    "Activity Code": "04K2",
+    "Task": "551_Steel structure cpl.",
+    "Resource": "Ravipratap Tomar",
+    "Hours": 2,
+    "Date": "2026-01-02"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Sufiyan",
+    "Activity Code": "04K6",
+    "Task": "881_3D Modelling (Cleanup)",
+    "Resource": "Shubham Mishra",
+    "Hours": 4,
+    "Date": "2026-01-02"
+  },
+  {
+    "Project": "BC0042-GCPL Bay City LMA N2",
+    "Project Lead": "Shubham Jagdale",
+    "Activity Code": "04K6",
+    "Task": "040_Foundation Plan",
+    "Resource": "Supriya Kachroo",
+    "Hours": 6,
+    "Date": "2026-01-02"
+  },
+  {
+    "Project": "BC001076 - Singapore Micron_Domex",
+    "Project Lead": "Tushar Pandey",
+    "Activity Code": "04K6",
+    "Task": "881_3D Modelling (Cleanup)",
+    "Resource": "Vikas Kumar",
+    "Hours": 1,
+    "Date": "2026-01-02"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K4",
+    "Task": "790_Auxiliary piping",
+    "Resource": "Yogesh Kumar",
+    "Hours": 8,
+    "Date": "2026-01-02"
+  },
+  {
+    "Project": "BC0042-GCPL Bay City LMA N2",
+    "Project Lead": "Bimal Singh",
+    "Activity Code": "04K4",
+    "Task": "India Systems internal Improvement Projects",
+    "Resource": "Soumya Ranjan",
+    "Hours": 4,
+    "Date": "2026-01-02"
+  },
+  {
+    "Project": "BC0042-GCPL Bay City LMA N2",
+    "Project Lead": "Rahul",
+    "Activity Code": "04K2",
+    "Task": "551_Baseframe Drawing",
+    "Resource": "Bihari Lal",
+    "Hours": 7,
+    "Date": "2026-01-02"
+  },
+  {
+    "Project": "BC001076 - Singapore Micron_Domex",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K6",
+    "Task": "India Systems internal Improvement Projects",
+    "Resource": "Bhuvnesh",
+    "Hours": 3,
+    "Date": "2026-01-02"
+  },
+  {
+    "Project": "BC0042-GCPL Bay City LMA N2",
+    "Project Lead": "Bimal Singh",
+    "Activity Code": "04K6",
+    "Task": "India Systems internal Improvement Projects",
+    "Resource": "Supriya Kachroo",
+    "Hours": 6,
+    "Date": "2026-01-05"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K6",
+    "Task": "881_3D Modelling (Cleanup)",
+    "Resource": "Yogesh Kumar",
+    "Hours": 3,
+    "Date": "2026-01-05"
+  },
+  {
+    "Project": "BC0042-GCPL Bay City LMA N2",
+    "Project Lead": "Bimal Singh",
+    "Activity Code": "04K4",
+    "Task": "740_Process gas piping Support",
+    "Resource": "Bihari Lal",
+    "Hours": 2,
+    "Date": "2026-01-05"
+  },
+  {
+    "Project": "BC0042-GCPL Bay City LMA N2",
+    "Project Lead": "Bimal Singh",
+    "Activity Code": "04K2",
+    "Task": "790_Auxiliary piping",
+    "Resource": "Shubham Jagdale",
+    "Hours": 5,
+    "Date": "2026-01-05"
+  },
+  {
+    "Project": "BC001076 - Singapore Micron_Domex",
+    "Project Lead": "Tushar Pandey",
+    "Activity Code": "04K2",
+    "Task": "040_General Arrangement",
+    "Resource": "Supriya Kachroo",
+    "Hours": 3,
+    "Date": "2026-01-05"
+  },
+  {
+    "Project": "BC0042-GCPL Bay City LMA N2",
+    "Project Lead": "Bimal Singh",
+    "Activity Code": "04K2",
+    "Task": "740_Process gas piping Support",
+    "Resource": "Ravipratap Tomar",
+    "Hours": 8,
+    "Date": "2026-01-05"
+  },
+  {
+    "Project": "BC001076 - Singapore Micron_Domex",
+    "Project Lead": "Tushar Pandey",
+    "Activity Code": "04K6",
+    "Task": "040_Foundation Plan",
+    "Resource": "Supriya Kachroo",
+    "Hours": 8,
+    "Date": "2026-01-06"
+  },
+  {
+    "Project": "BC0042-GCPL Bay City LMA N2",
+    "Project Lead": "Bimal Singh",
+    "Activity Code": "04K4",
+    "Task": "790_Auxiliary piping",
+    "Resource": "Rahul",
+    "Hours": 4,
+    "Date": "2026-01-06"
+  },
+  {
+    "Project": "BC001076 - Singapore Micron_Domex",
+    "Project Lead": "Tushar Pandey",
+    "Activity Code": "04K4",
+    "Task": "040_Foundation Plan",
+    "Resource": "Soumya Ranjan",
+    "Hours": 6,
+    "Date": "2026-01-06"
+  },
+  {
+    "Project": "BC001076 - Singapore Micron_Domex",
+    "Project Lead": "Tushar Pandey",
+    "Activity Code": "04K2",
+    "Task": "740_Process gas piping Support",
+    "Resource": "Ajay Singh",
+    "Hours": 6,
+    "Date": "2026-01-06"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K6",
+    "Task": "040_Foundation Plan",
+    "Resource": "Soumya Ranjan",
+    "Hours": 4,
+    "Date": "2026-01-06"
+  },
+  {
+    "Project": "BC0042-GCPL Bay City LMA N2",
+    "Project Lead": "Bimal Singh",
+    "Activity Code": "04K6",
+    "Task": "040_General Arrangement",
+    "Resource": "Bihari Lal",
+    "Hours": 7,
+    "Date": "2026-01-06"
+  },
+  {
+    "Project": "BC0042-GCPL Bay City LMA N2",
+    "Project Lead": "Bimal Singh",
+    "Activity Code": "04K6",
+    "Task": "551_Baseframe Drawing",
+    "Resource": "Bhuvnesh",
+    "Hours": 7,
+    "Date": "2026-01-06"
+  },
+  {
+    "Project": "BC001076 - Singapore Micron_Domex",
+    "Project Lead": "Tushar Pandey",
+    "Activity Code": "04K2",
+    "Task": "551_Steel structure cpl.",
+    "Resource": "Bihari Lal",
+    "Hours": 4,
+    "Date": "2026-01-06"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K6",
+    "Task": "790_Auxiliary piping",
+    "Resource": "Ravipratap Tomar",
+    "Hours": 4,
+    "Date": "2026-01-06"
+  },
+  {
+    "Project": "BC001076 - Singapore Micron_Domex",
+    "Project Lead": "Tushar Pandey",
+    "Activity Code": "04K2",
+    "Task": "040_Machine piping Plan",
+    "Resource": "Bhuvnesh",
+    "Hours": 7,
+    "Date": "2026-01-07"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K2",
+    "Task": "India Systems internal Improvement Projects",
+    "Resource": "Bhuvnesh",
+    "Hours": 7,
+    "Date": "2026-01-07"
+  },
+  {
+    "Project": "BC0042-GCPL Bay City LMA N2",
+    "Project Lead": "Bimal Singh",
+    "Activity Code": "04K4",
+    "Task": "India Systems internal Improvement Projects",
+    "Resource": "Sufiyan",
+    "Hours": 5,
+    "Date": "2026-01-07"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K4",
+    "Task": "551_Steel structure cpl.",
+    "Resource": "Yogesh Kumar",
+    "Hours": 4,
+    "Date": "2026-01-07"
+  },
+  {
+    "Project": "BC0042-GCPL Bay City LMA N2",
+    "Project Lead": "Bimal Singh",
+    "Activity Code": "04K6",
+    "Task": "881_3D Modelling (Cleanup)",
+    "Resource": "Yogesh Kumar",
+    "Hours": 8,
+    "Date": "2026-01-07"
+  },
+  {
+    "Project": "BC001076 - Singapore Micron_Domex",
+    "Project Lead": "Tushar Pandey",
+    "Activity Code": "04K2",
+    "Task": "790_Auxiliary piping",
+    "Resource": "Soumya Ranjan",
+    "Hours": 8,
+    "Date": "2026-01-07"
+  },
+  {
+    "Project": "BC001076 - Singapore Micron_Domex",
+    "Project Lead": "Tushar Pandey",
+    "Activity Code": "04K6",
+    "Task": "040_Foundation Plan",
+    "Resource": "Bimal Singh",
+    "Hours": 2,
+    "Date": "2026-01-07"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K6",
+    "Task": "040_Machine piping Plan",
+    "Resource": "Ravipratap Tomar",
+    "Hours": 3,
+    "Date": "2026-01-08"
+  },
+  {
+    "Project": "BC0042-GCPL Bay City LMA N2",
+    "Project Lead": "Bimal Singh",
+    "Activity Code": "04K6",
+    "Task": "India Systems internal Improvement Projects",
+    "Resource": "Soumya Ranjan",
+    "Hours": 1,
+    "Date": "2026-01-08"
+  },
+  {
+    "Project": "BC001076 - Singapore Micron_Domex",
+    "Project Lead": "Tushar Pandey",
+    "Activity Code": "04K2",
+    "Task": "040_Foundation Plan",
+    "Resource": "Shubham Jagdale",
+    "Hours": 5,
+    "Date": "2026-01-08"
+  },
+  {
+    "Project": "BC001076 - Singapore Micron_Domex",
+    "Project Lead": "Tushar Pandey",
+    "Activity Code": "04K6",
+    "Task": "551_Baseframe Drawing",
+    "Resource": "Sufiyan",
+    "Hours": 4,
+    "Date": "2026-01-08"
+  },
+  {
+    "Project": "BC001076 - Singapore Micron_Domex",
+    "Project Lead": "Tushar Pandey",
+    "Activity Code": "04K4",
+    "Task": "040_General Arrangement",
+    "Resource": "Shubham Mishra",
+    "Hours": 2,
+    "Date": "2026-01-08"
+  },
+  {
+    "Project": "BC001076 - Singapore Micron_Domex",
+    "Project Lead": "Tushar Pandey",
+    "Activity Code": "04K6",
+    "Task": "740_Process gas piping Support",
+    "Resource": "Yogesh Kumar",
+    "Hours": 6,
+    "Date": "2026-01-08"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K2",
+    "Task": "881_3D Modelling (Cleanup)",
+    "Resource": "Manoj Kumar",
+    "Hours": 6,
+    "Date": "2026-01-08"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K2",
+    "Task": "040_General Arrangement",
+    "Resource": "Rahul",
+    "Hours": 7,
+    "Date": "2026-01-08"
+  },
+  {
+    "Project": "BC0042-GCPL Bay City LMA N2",
+    "Project Lead": "Bimal Singh",
+    "Activity Code": "04K2",
+    "Task": "740_Process gas piping Support",
+    "Resource": "Shubham Mishra",
+    "Hours": 3,
+    "Date": "2026-01-09"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K2",
+    "Task": "740_Process gas piping Support",
+    "Resource": "Bihari Lal",
+    "Hours": 5,
+    "Date": "2026-01-09"
+  },
+  {
+    "Project": "BC001076 - Singapore Micron_Domex",
+    "Project Lead": "Tushar Pandey",
+    "Activity Code": "04K4",
+    "Task": "India Systems internal Improvement Projects",
+    "Resource": "Rahul",
+    "Hours": 3,
+    "Date": "2026-01-09"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K4",
+    "Task": "551_Baseframe Drawing",
+    "Resource": "Shubham Mishra",
+    "Hours": 6,
+    "Date": "2026-01-09"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K2",
+    "Task": "881_3D Modelling (Cleanup)",
+    "Resource": "Ajay Singh",
+    "Hours": 1,
+    "Date": "2026-01-09"
+  },
+  {
+    "Project": "BC0042-GCPL Bay City LMA N2",
+    "Project Lead": "Bimal Singh",
+    "Activity Code": "04K6",
+    "Task": "India Systems internal Improvement Projects",
+    "Resource": "Bimal Singh",
+    "Hours": 8,
+    "Date": "2026-01-09"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K2",
+    "Task": "040_General Arrangement",
+    "Resource": "Shubham Mishra",
+    "Hours": 7,
+    "Date": "2026-01-09"
+  },
+  {
+    "Project": "BC001076 - Singapore Micron_Domex",
+    "Project Lead": "Tushar Pandey",
+    "Activity Code": "04K6",
+    "Task": "551_Baseframe Drawing",
+    "Resource": "Sufiyan",
+    "Hours": 4,
+    "Date": "2026-01-09"
+  },
+  {
+    "Project": "BC0042-GCPL Bay City LMA N2",
+    "Project Lead": "Bimal Singh",
+    "Activity Code": "04K6",
+    "Task": "India Systems internal Improvement Projects",
+    "Resource": "Soumya Ranjan",
+    "Hours": 3,
+    "Date": "2026-01-12"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K4",
+    "Task": "040_Foundation Plan",
+    "Resource": "Ravipratap Tomar",
+    "Hours": 5,
+    "Date": "2026-01-12"
+  },
+  {
+    "Project": "BC001076 - Singapore Micron_Domex",
+    "Project Lead": "Tushar Pandey",
+    "Activity Code": "04K2",
+    "Task": "India Systems internal Improvement Projects",
+    "Resource": "Yogesh Kumar",
+    "Hours": 5,
+    "Date": "2026-01-12"
+  },
+  {
+    "Project": "BC0042-GCPL Bay City LMA N2",
+    "Project Lead": "Bimal Singh",
+    "Activity Code": "04K4",
+    "Task": "040_General Arrangement",
+    "Resource": "Shubham Jagdale",
+    "Hours": 8,
+    "Date": "2026-01-12"
+  },
+  {
+    "Project": "BC0042-GCPL Bay City LMA N2",
+    "Project Lead": "Bimal Singh",
+    "Activity Code": "04K6",
+    "Task": "India Systems internal Improvement Projects",
+    "Resource": "Soumya Ranjan",
+    "Hours": 2,
+    "Date": "2026-01-12"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K2",
+    "Task": "040_General Arrangement",
+    "Resource": "Ajay Singh",
+    "Hours": 3,
+    "Date": "2026-01-13"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K4",
+    "Task": "India Systems internal Improvement Projects",
+    "Resource": "Soumya Ranjan",
+    "Hours": 3,
+    "Date": "2026-01-13"
+  },
+  {
+    "Project": "BC0042-GCPL Bay City LMA N2",
+    "Project Lead": "Bimal Singh",
+    "Activity Code": "04K2",
+    "Task": "040_Foundation Plan",
+    "Resource": "Bihari Lal",
+    "Hours": 2,
+    "Date": "2026-01-13"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K4",
+    "Task": "551_Steel structure cpl.",
+    "Resource": "Ravipratap Tomar",
+    "Hours": 6,
+    "Date": "2026-01-13"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K6",
+    "Task": "040_Foundation Plan",
+    "Resource": "Yogesh Kumar",
+    "Hours": 6,
+    "Date": "2026-01-13"
+  },
+  {
+    "Project": "BC0042-GCPL Bay City LMA N2",
+    "Project Lead": "Bimal Singh",
+    "Activity Code": "04K6",
+    "Task": "551_Baseframe Drawing",
+    "Resource": "Manoj Kumar",
+    "Hours": 7,
+    "Date": "2026-01-13"
+  },
+  {
+    "Project": "BC0042-GCPL Bay City LMA N2",
+    "Project Lead": "Bimal Singh",
+    "Activity Code": "04K6",
+    "Task": "040_Foundation Plan",
+    "Resource": "Ravipratap Tomar",
+    "Hours": 6,
+    "Date": "2026-01-13"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K4",
+    "Task": "551_Baseframe Drawing",
+    "Resource": "Bhuvnesh",
+    "Hours": 6,
+    "Date": "2026-01-13"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K2",
+    "Task": "040_Foundation Plan",
+    "Resource": "Yogesh Kumar",
+    "Hours": 8,
+    "Date": "2026-01-14"
+  },
+  {
+    "Project": "BC001076 - Singapore Micron_Domex",
+    "Project Lead": "Tushar Pandey",
+    "Activity Code": "04K6",
+    "Task": "790_Auxiliary piping",
+    "Resource": "Ajay Singh",
+    "Hours": 1,
+    "Date": "2026-01-14"
+  },
+  {
+    "Project": "BC0042-GCPL Bay City LMA N2",
+    "Project Lead": "Bimal Singh",
+    "Activity Code": "04K2",
+    "Task": "740_Process gas piping Support",
+    "Resource": "Shubham Mishra",
+    "Hours": 7,
+    "Date": "2026-01-14"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K6",
+    "Task": "India Systems internal Improvement Projects",
+    "Resource": "Soumya Ranjan",
+    "Hours": 4,
+    "Date": "2026-01-14"
+  },
+  {
+    "Project": "BC001076 - Singapore Micron_Domex",
+    "Project Lead": "Tushar Pandey",
+    "Activity Code": "04K4",
+    "Task": "551_Baseframe Drawing",
+    "Resource": "Bhuvnesh",
+    "Hours": 7,
+    "Date": "2026-01-14"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K4",
+    "Task": "551_Baseframe Drawing",
+    "Resource": "Sufiyan",
+    "Hours": 4,
+    "Date": "2026-01-15"
+  },
+  {
+    "Project": "BC001076 - Singapore Micron_Domex",
+    "Project Lead": "Tushar Pandey",
+    "Activity Code": "04K2",
+    "Task": "040_General Arrangement",
+    "Resource": "Bhuvnesh",
+    "Hours": 5,
+    "Date": "2026-01-15"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K4",
+    "Task": "790_Auxiliary piping",
+    "Resource": "Shubham Jagdale",
+    "Hours": 8,
+    "Date": "2026-01-15"
+  },
+  {
+    "Project": "BC001076 - Singapore Micron_Domex",
+    "Project Lead": "Tushar Pandey",
+    "Activity Code": "04K6",
+    "Task": "551_Baseframe Drawing",
+    "Resource": "Shubham Mishra",
+    "Hours": 2,
+    "Date": "2026-01-15"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K4",
+    "Task": "India Systems internal Improvement Projects",
+    "Resource": "Bimal Singh",
+    "Hours": 3,
+    "Date": "2026-01-15"
+  },
+  {
+    "Project": "BC001076 - Singapore Micron_Domex",
+    "Project Lead": "Tushar Pandey",
+    "Activity Code": "04K2",
+    "Task": "740_Process gas piping Support",
+    "Resource": "Ajay Singh",
+    "Hours": 6,
+    "Date": "2026-01-16"
+  },
+  {
+    "Project": "BC0042-GCPL Bay City LMA N2",
+    "Project Lead": "Bimal Singh",
+    "Activity Code": "04K2",
+    "Task": "040_Machine piping Plan",
+    "Resource": "Shubham Jagdale",
+    "Hours": 1,
+    "Date": "2026-01-16"
+  },
+  {
+    "Project": "BC0042-GCPL Bay City LMA N2",
+    "Project Lead": "Bimal Singh",
+    "Activity Code": "04K6",
+    "Task": "040_Machine piping Plan",
+    "Resource": "Bhuvnesh",
+    "Hours": 2,
+    "Date": "2026-01-16"
+  },
+  {
+    "Project": "BC0042-GCPL Bay City LMA N2",
+    "Project Lead": "Bimal Singh",
+    "Activity Code": "04K2",
+    "Task": "India Systems internal Improvement Projects",
+    "Resource": "Bimal Singh",
+    "Hours": 7,
+    "Date": "2026-01-16"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K2",
+    "Task": "740_Process gas piping Support",
+    "Resource": "Rahul",
+    "Hours": 3,
+    "Date": "2026-01-16"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K6",
+    "Task": "040_General Arrangement",
+    "Resource": "Bihari Lal",
+    "Hours": 6,
+    "Date": "2026-01-16"
+  },
+  {
+    "Project": "BC0042-GCPL Bay City LMA N2",
+    "Project Lead": "Bimal Singh",
+    "Activity Code": "04K2",
+    "Task": "040_General Arrangement",
+    "Resource": "Bimal Singh",
+    "Hours": 3,
+    "Date": "2026-01-16"
+  },
+  {
+    "Project": "BC0042-GCPL Bay City LMA N2",
+    "Project Lead": "Bimal Singh",
+    "Activity Code": "04K6",
+    "Task": "551_Steel structure cpl.",
+    "Resource": "Shubham Jagdale",
+    "Hours": 4,
+    "Date": "2026-01-16"
+  },
+  {
+    "Project": "BC001076 - Singapore Micron_Domex",
+    "Project Lead": "Tushar Pandey",
+    "Activity Code": "04K4",
+    "Task": "551_Baseframe Drawing",
+    "Resource": "Shubham Jagdale",
+    "Hours": 6,
+    "Date": "2026-01-19"
+  },
+  {
+    "Project": "BC0042-GCPL Bay City LMA N2",
+    "Project Lead": "Bimal Singh",
+    "Activity Code": "04K6",
+    "Task": "India Systems internal Improvement Projects",
+    "Resource": "Ravipratap Tomar",
+    "Hours": 2,
+    "Date": "2026-01-19"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K6",
+    "Task": "India Systems internal Improvement Projects",
+    "Resource": "Rahul",
+    "Hours": 7,
+    "Date": "2026-01-19"
+  },
+  {
+    "Project": "BC0042-GCPL Bay City LMA N2",
+    "Project Lead": "Bimal Singh",
+    "Activity Code": "04K4",
+    "Task": "040_Foundation Plan",
+    "Resource": "Sufiyan",
+    "Hours": 1,
+    "Date": "2026-01-19"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K6",
+    "Task": "040_Foundation Plan",
+    "Resource": "Soumya Ranjan",
+    "Hours": 6,
+    "Date": "2026-01-19"
+  },
+  {
+    "Project": "BC001076 - Singapore Micron_Domex",
+    "Project Lead": "Tushar Pandey",
+    "Activity Code": "04K4",
+    "Task": "551_Baseframe Drawing",
+    "Resource": "Ravipratap Tomar",
+    "Hours": 5,
+    "Date": "2026-01-19"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K6",
+    "Task": "881_3D Modelling (Cleanup)",
+    "Resource": "Shubham Mishra",
+    "Hours": 5,
+    "Date": "2026-01-20"
+  },
+  {
+    "Project": "BC0042-GCPL Bay City LMA N2",
+    "Project Lead": "Bimal Singh",
+    "Activity Code": "04K6",
+    "Task": "India Systems internal Improvement Projects",
+    "Resource": "Ajay Singh",
+    "Hours": 2,
+    "Date": "2026-01-20"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K2",
+    "Task": "040_Machine piping Plan",
+    "Resource": "Shubham Jagdale",
+    "Hours": 8,
+    "Date": "2026-01-20"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K6",
+    "Task": "040_Foundation Plan",
+    "Resource": "Rahul",
+    "Hours": 6,
+    "Date": "2026-01-20"
+  },
+  {
+    "Project": "BC001076 - Singapore Micron_Domex",
+    "Project Lead": "Tushar Pandey",
+    "Activity Code": "04K6",
+    "Task": "881_3D Modelling (Cleanup)",
+    "Resource": "Shubham Jagdale",
+    "Hours": 6,
+    "Date": "2026-01-20"
+  },
+  {
+    "Project": "BC001076 - Singapore Micron_Domex",
+    "Project Lead": "Tushar Pandey",
+    "Activity Code": "04K4",
+    "Task": "040_General Arrangement",
+    "Resource": "Vikas Kumar",
+    "Hours": 8,
+    "Date": "2026-01-20"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K4",
+    "Task": "790_Auxiliary piping",
+    "Resource": "Vikas Kumar",
+    "Hours": 7,
+    "Date": "2026-01-20"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K2",
+    "Task": "551_Baseframe Drawing",
+    "Resource": "Manoj Kumar",
+    "Hours": 1,
+    "Date": "2026-01-20"
+  },
+  {
+    "Project": "BC001076 - Singapore Micron_Domex",
+    "Project Lead": "Tushar Pandey",
+    "Activity Code": "04K6",
+    "Task": "790_Auxiliary piping",
+    "Resource": "Shubham Mishra",
+    "Hours": 4,
+    "Date": "2026-01-21"
+  },
+  {
+    "Project": "BC001076 - Singapore Micron_Domex",
+    "Project Lead": "Tushar Pandey",
+    "Activity Code": "04K6",
+    "Task": "040_General Arrangement",
+    "Resource": "Soumya Ranjan",
+    "Hours": 2,
+    "Date": "2026-01-21"
+  },
+  {
+    "Project": "BC001076 - Singapore Micron_Domex",
+    "Project Lead": "Tushar Pandey",
+    "Activity Code": "04K4",
+    "Task": "551_Steel structure cpl.",
+    "Resource": "Ajay Singh",
+    "Hours": 4,
+    "Date": "2026-01-21"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K2",
+    "Task": "790_Auxiliary piping",
+    "Resource": "Bhuvnesh",
+    "Hours": 5,
+    "Date": "2026-01-21"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K2",
+    "Task": "551_Baseframe Drawing",
+    "Resource": "Soumya Ranjan",
+    "Hours": 5,
+    "Date": "2026-01-21"
+  },
+  {
+    "Project": "BC0042-GCPL Bay City LMA N2",
+    "Project Lead": "Bimal Singh",
+    "Activity Code": "04K2",
+    "Task": "740_Process gas piping Support",
+    "Resource": "Ajay Singh",
+    "Hours": 5,
+    "Date": "2026-01-21"
+  },
+  {
+    "Project": "BC0042-GCPL Bay City LMA N2",
+    "Project Lead": "Bimal Singh",
+    "Activity Code": "04K6",
+    "Task": "India Systems internal Improvement Projects",
+    "Resource": "Soumya Ranjan",
+    "Hours": 6,
+    "Date": "2026-01-21"
+  },
+  {
+    "Project": "BC001076 - Singapore Micron_Domex",
+    "Project Lead": "Tushar Pandey",
+    "Activity Code": "04K2",
+    "Task": "790_Auxiliary piping",
+    "Resource": "Soumya Ranjan",
+    "Hours": 4,
+    "Date": "2026-01-21"
+  },
+  {
+    "Project": "BC001076 - Singapore Micron_Domex",
+    "Project Lead": "Tushar Pandey",
+    "Activity Code": "04K2",
+    "Task": "551_Baseframe Drawing",
+    "Resource": "Bhuvnesh",
+    "Hours": 4,
+    "Date": "2026-01-22"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K6",
+    "Task": "040_Foundation Plan",
+    "Resource": "Shubham Jagdale",
+    "Hours": 3,
+    "Date": "2026-01-22"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K2",
+    "Task": "551_Baseframe Drawing",
+    "Resource": "Bhuvnesh",
+    "Hours": 5,
+    "Date": "2026-01-22"
+  },
+  {
+    "Project": "BC001076 - Singapore Micron_Domex",
+    "Project Lead": "Tushar Pandey",
+    "Activity Code": "04K6",
+    "Task": "740_Process gas piping Support",
+    "Resource": "Bimal Singh",
+    "Hours": 4,
+    "Date": "2026-01-22"
+  },
+  {
+    "Project": "BC001076 - Singapore Micron_Domex",
+    "Project Lead": "Tushar Pandey",
+    "Activity Code": "04K4",
+    "Task": "740_Process gas piping Support",
+    "Resource": "Yogesh Kumar",
+    "Hours": 2,
+    "Date": "2026-01-22"
+  },
+  {
+    "Project": "BC001076 - Singapore Micron_Domex",
+    "Project Lead": "Tushar Pandey",
+    "Activity Code": "04K4",
+    "Task": "India Systems internal Improvement Projects",
+    "Resource": "Yogesh Kumar",
+    "Hours": 4,
+    "Date": "2026-01-22"
+  },
+  {
+    "Project": "BC0042-GCPL Bay City LMA N2",
+    "Project Lead": "Bimal Singh",
+    "Activity Code": "04K4",
+    "Task": "040_Foundation Plan",
+    "Resource": "Bihari Lal",
+    "Hours": 7,
+    "Date": "2026-01-22"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K4",
+    "Task": "040_Foundation Plan",
+    "Resource": "Bimal Singh",
+    "Hours": 2,
+    "Date": "2026-01-22"
+  },
+  {
+    "Project": "BC001055 - Bhagapura_AL_ASU_MAC",
+    "Project Lead": "Yogesh Kumar",
+    "Activity Code": "04K2",
+    "Task": "881_3D Modelling (Cleanup)",
+    "Resource": "Vikas Kumar",
+    "Hours": 7,
+    "Date": "2026-01-22"
+  }
+]
