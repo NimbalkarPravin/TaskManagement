@@ -7,7 +7,7 @@ import { catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class TaskMasterService {
-  private apiUrl = 'https://localhost:7128/api/TaskMaster/';
+  private apiUrl = 'https://taskmanagementapi.bsite.net/api/TaskMaster/';
   //baseUrl: 'https://taskmanagementapi.bsite.net/'
   //this.http.get(`${environment.apiUrl}/items`);
   constructor(private http: HttpClient) {}
