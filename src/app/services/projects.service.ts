@@ -4,15 +4,18 @@ import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { ProjectModel } from '../models/project';
 import { TaskModel } from '../models/task';
+import { environment } from 'src/environments/environment.prod';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProjectService {
   // Adjust the API URL to match your backend
-  private apiUrl = 'https://localhost:7128/api/';
-//private apiUrl = 'https://taskmanagementapi.bsite.net/api/Project/';
-
+  //private apiUrl = 'https://localhost:7128/api/';
+  //private apiUrl = 'https://taskmanagementapi.bsite.net/api/';
+  private apiUrl = environment.baseUrl;
+  //private apiUrl = this.http.get(`${environment.baseUrl}/`);
+  
   constructor(private http: HttpClient) {}
 
   // Get all projects

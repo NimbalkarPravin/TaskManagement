@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  baseUrl: 'https://taskmanagementapi.bsite.net/'
+  baseUrl: 'https://taskmanagementapi.bsite.net/api/'
 };
