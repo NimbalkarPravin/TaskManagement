@@ -1,0 +1,44 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "firstName": "Dean K.",
+      "lastName": "Griffin",
+      "doj": "June 22, 2019",
+      "email": "DeanKGriffin@armyspy.com",
+      "mobile": "573-844-6213",
+      "salary": "50000"
+    },
+    {
+      "id": "2",
+      "firstName": "Lee R.",
+      "lastName": "Miller",
+      "doj": "January 8, 1995",
+      "email": "LeeRMiller@rhyta.com",
+      "mobile": "310-588-6715",
+      "salary": "87000"
+    },
+    {
+      "id": 0,
+      "firstName": "546",
+      "lastName": "56456",
+      "doj": "56",
+      "email": "",
+      "mobile": "56",
+      "salary": "456457"
+    },
+    {
+      "id": 0,
+      "firstName": "ygui",
+      "lastName": "yjfdgjkh",
+      "doj": "jdfhgjkh",
+      "email": "hfdjgj",
+      "mobile": "hfdfgh",
+      "salary": "fhdjkg"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

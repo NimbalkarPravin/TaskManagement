@@ -1,0 +1,218 @@
+
+<form [formGroup]="filterform" class="filter-form">
+  <div class="form-group">
+    <label for="month">Select Month:</label>
+    <select id="month" formControlName="month">
+      <option *ngFor="let m of months" [value]="m.value">{{ m.name }}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="year">Select Year:</label>
+    <select id="year" formControlName="year">
+      <option *ngFor="let y of years" [value]="y">{{ y }}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="project">Select Project:</label>
+    <select id="project" formControlName="project">
+      <option value="">All</option>
+      <option *ngFor="let p of projects" [value]="p.name">{{ p.name }}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="employee">Select Employee:</label>
+    <select id="employee" formControlName="employee">
+      <option value="">All</option>
+      <option *ngFor="let e of employees" [value]="e.firstName + ' ' + e.lastName">
+        {{ e.firstName }} {{ e.lastName }}
+      </option>
+    </select>
+  </div>
+  <button class="btn btn-sm btn-primary pull-right"  
+  (click)="clearFilters()">
+  <i class="fas fa-times"></i> Clear
+  </button>
+
+  <button class="btn btn-sm btn-primary pull-right"  
+    data-bs-toggle="modal" data-bs-target="#addEditModal"
+    (click)="openCreateTask()">
+    <i class="fas fa-plus"></i> New Task
+  </button>
+</form>
+
+<div class="grid-wrapper">
+  <table class="task-grid">
+  <thead>
+    <tr>
+      <th>Employee</th>
+      <th *ngFor="let col of dateColumns" [class.bg-light]="col.isWeekend" style="min-width: 215px;">
+        {{ col.label }}
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let e of employees">
+      <td class="employee-cell sticky-header">
+        <div><strong>{{ e.firstName }} {{ e.lastName }}</strong></div>
+      </td>      
+      <td *ngFor="let col of dateColumns">
+        <ng-container *ngIf="getTasks(e.firstName + ' ' + e.lastName, col.key).length > 0; else emptyCell">
+          <div *ngFor="let task of getTasks(e.firstName + ' ' + e.lastName, col.key)" class="task-cell">
+            <div class="task-content">
+              <div class="task-details">
+                <strong>Project:</strong> {{ task.projectName }} <br>
+                <strong>Activity Code:</strong> {{ task.activityCode }} <br>
+                <strong>Task:</strong> {{ task.task }} <br>
+                <strong>Hours:</strong> {{ task.hours }} <br>
+                <strong>Status:</strong> {{ task.status }} <br>
+                <strong>Created Date:</strong> {{ task.date | date:'dd/MM/yyyy' }}
+              </div>
+              <button class="btn btn-sm btn-link text-primary"
+                      data-bs-toggle="modal" data-bs-target="#addEditModal"
+                      (click)="editTask(task)">
+                <i class="fas fa-pencil-alt"></i>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Edit Pencil -->
+          
+        </ng-container>
+        <ng-template #emptyCell>
+          <div class="no-task" *ngIf="col.weekday !== 'Saturday' && col.weekday !== 'Sunday'">
+            <span>-</span>
+          </div>              
+        </ng-template>
+        <div class="weekend-cell" *ngIf="col.weekday === 'Saturday' || col.weekday === 'Sunday'">
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="addEditModal" tabindex="-1">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <form [formGroup]="form" (ngSubmit)="saveTask()">
+        <div class="modal-header">
+          <h5 class="modal-title">
+            {{ mode === 'create' ? 'Create New Task' : 'Edit Task' }}
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="project">Project</label>
+            <select 
+              id="project" 
+              class="form-control" 
+              formControlName="project"
+              [ngClass]="{'is-invalid': form.get('project')?.invalid && form.get('project')?.touched}"
+            >              
+              <option value="">-- Select Project --</option>
+              <option *ngFor="let p of selectedprojects" [value]="p.name">{{ p.name }}</option>
+            </select>
+            <div class="invalid-feedback">
+              Project selection is required.
+            </div>
+          </div>
+                   
+          <div class="mb-3">
+            <label>Activity Code</label>
+            <input 
+              type="text" 
+              class="form-control" 
+              formControlName="activityCode"
+              [ngClass]="{'is-invalid': form.get('activityCode')?.invalid && form.get('activityCode')?.touched}"
+            >
+            <div class="invalid-feedback">
+              Activity Code is required.
+            </div>
+          </div>
+          
+          <div class="mb-3">
+            <label for="task">Task</label>            
+            <select 
+              id="task" 
+              class="form-control" 
+              formControlName="task"
+              [ngClass]="{'is-invalid': form.get('task')?.invalid && form.get('task')?.touched}"
+            >              
+              <option value="">-- Select Task --</option>
+              <option *ngFor="let t of tasks" [value]="t.name">{{ t.name }}</option>
+            </select>
+            <div class="invalid-feedback">
+              Task selection is required.
+            </div>
+          </div>
+          
+          <div class="mb-3">
+            <label>Hours</label>
+            <input 
+              type="number" 
+              class="form-control" 
+              formControlName="hours"  
+              min="1" max="8"
+              [ngClass]="{'is-invalid': form.get('hours')?.invalid && form.get('hours')?.touched}"
+            >
+            <div class="invalid-feedback" *ngIf="form.get('hours')?.hasError('required')">
+              Hours are required.
+            </div>
+            <div class="invalid-feedback" *ngIf="form.get('hours')?.hasError('min') || form.get('hours')?.hasError('max')">
+              Hours must be between 1 and 8.
+            </div>
+          </div>
+          
+          <div class="mb-3">
+            <label for="status">Status</label>
+            <select 
+              id="status" 
+              class="form-control" 
+              formControlName="status"
+              [ngClass]="{'is-invalid': form.get('status')?.invalid && form.get('status')?.touched}"
+            >             
+              <option value="">-- Select Status --</option>
+              <option value="Not Started">Not Started</option>
+              <option value="Open">Open</option>
+              <option value="In Progress">In Progress</option>
+              <option value="Completed">Completed</option>
+              <option value="On Hold">On Hold</option>
+              <option value="Cancelled">Cancelled</option>
+            </select>
+            <div class="invalid-feedback">
+              Status is required.
+            </div>
+          </div>
+          
+          <div class="mb-3">
+            <label>Date</label>
+            <input 
+              type="date" 
+              class="form-control" 
+              formControlName="date"
+              [ngClass]="{'is-invalid': form.get('date')?.invalid && form.get('date')?.touched}"
+            >
+            <div class="invalid-feedback">
+              Date is required.
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <label class="form-check-label me-auto big-checkbox" *ngIf="mode === 'create'"> 
+            <input type="checkbox" class="form-check-input" (change)="confirmLeave($event)"/> Leave 
+          </label>
+          
+          <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Save</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        </div>
+      </form>    
+    </div>
+  </div>
+</div>
+<div id="alert-container"></div>
