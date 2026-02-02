@@ -175,6 +175,7 @@ export class TaskdashboardComponent implements OnInit, OnDestroy {
         isActive: true,
         date: updated.date
       };
+      
   
       const request$ = saveModel.id
   ? this.taskMasterService.updateTaskMaster(saveModel.id, saveModel)
