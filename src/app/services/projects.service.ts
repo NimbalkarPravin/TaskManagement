@@ -14,8 +14,6 @@ export class ProjectService {
   //private apiUrl = 'https://localhost:7128/api/';
   //private apiUrl = 'https://taskmanagementapi.bsite.net/api/';
   private apiUrl = environment.baseUrl;
-  //private apiUrl = this.http.get(`${environment.baseUrl}/`);
-  
   constructor(private http: HttpClient) {}
 
   // Get all projects
