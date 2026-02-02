@@ -10,8 +10,8 @@ import { TaskModel } from '../models/task';
 })
 export class ProjectService {
   // Adjust the API URL to match your backend
-  private apiUrl = 'https://localhost:7128/api/';
-//private apiUrl = 'https://taskmanagementapi.bsite.net/api/Project/';
+  //private apiUrl = 'https://localhost:7128/api/';
+ private apiUrl = 'https://taskmanagementapi.bsite.net/api/';
 
   constructor(private http: HttpClient) {}
 
