@@ -38,7 +38,7 @@ export class ProjectService {
 
   // Get project by ID
   getProjectById(id: number): Observable<ProjectModel | null> {
-    return this.http.get<ProjectModel>(`${this.apiUrl}GetProject/${id}`).pipe(
+    return this.http.get<ProjectModel>(`${this.apiUrl}Project/GetProject/${id}`).pipe(
       catchError(error => {
         console.error(`Error fetching project with id ${id}:`, error);
         return of(null);
@@ -48,31 +48,49 @@ export class ProjectService {
 
   // Create new project
   createProject(project: ProjectModel): Observable<ProjectModel | null> {
-    return this.http.post<ProjectModel>(this.apiUrl + 'CreateProject', project).pipe(
+    const payload = {
+      id: project.id,
+      projectName: project.name,   // map Angular "name" → API "ProjectName"
+      status: project.status,
+      isActive: project.isActive
+    };
+  
+    return this.http.post<ProjectModel>(this.apiUrl + 'Project/CreateProject', payload).pipe(
       catchError(error => {
         console.error('Error creating project:', error);
         return of(null);
       })
     );
   }
+  
 
-  // Update project
-  updateProject(id: number, project: ProjectModel): Observable<ProjectModel | null> {
-    return this.http.put<ProjectModel>(`${this.apiUrl}UpdateProject/${id}`, project).pipe(
-      catchError(error => {
-        console.error(`Error updating project with id ${id}:`, error);
-        return of(null);
-      })
-    );
-  }
+// Update project
+updateProject(id: number, project: ProjectModel): Observable<ProjectModel | null> {
+  const payload = {
+    id: project.id,
+    projectName: project.name,  // must match backend DTO
+    status: project.status,
+    isActive: project.isActive
+  };
 
-  // Delete project
-  deleteProject(id: number): Observable<boolean> {
-    return this.http.delete<boolean>(`${this.apiUrl}DeleteProject/${id}`).pipe(
-      catchError(error => {
-        console.error(`Error deleting project with id ${id}:`, error);
-        return of(false);
-      })
-    );
-  }
+  return this.http.put<ProjectModel>(`${this.apiUrl}Project/${id}`, payload).pipe(
+    catchError(error => {
+      console.error(`Error updating project with id ${id}:`, error);
+      return of(null);
+    })
+  );
+}
+
+// Delete project
+deleteProject(id: number): Observable<any> {
+  return this.http.delete<any>(`${this.apiUrl}Project/${id}`).pipe(
+    catchError(error => {
+      console.error(`Error deleting project with id ${id}:`, error);
+      return of(null);
+    })
+  );
+}
+
+  
+
 }

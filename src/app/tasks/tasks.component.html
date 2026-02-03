@@ -1,0 +1,43 @@
+<div class="container mt-3">
+    <h3>Tasks</h3>
+  
+    <!-- Alert -->
+    <div *ngIf="alertMessage" class="alert alert-{{alertType}}">{{ alertMessage }}</div>
+  
+    <button class="btn btn-sm btn-primary mb-2" (click)="openCreateTask()" data-bs-toggle="modal" data-bs-target="#taskModal">
+      <i class="fas fa-plus"></i> New Task
+    </button>
+  
+    <!-- Scrollable Table -->
+    <div class="task-table-wrapper">
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Status</th>
+            <th>Is Active</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Show ALL tasks, but container scrolls -->
+          <tr *ngFor="let task of tasks">
+            <td>{{ task.id }}</td>
+            <td>{{ task.name }}</td>
+            <td>{{ task.status }}</td>
+            <td>{{ task.isActive ? 'Yes' : 'No' }}</td>
+            <td>
+              <button class="btn btn-sm btn-info me-1" (click)="editTask(task)" data-bs-toggle="modal" data-bs-target="#taskModal">
+                <i class="fas fa-pencil-alt"></i>
+              </button>
+              <button class="btn btn-sm btn-danger" (click)="deleteTask(task.id)">
+                <i class="fas fa-trash-alt"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

@@ -1,0 +1,9 @@
+.employee-table-wrapper {
+    max-height: 400px;   /* show ~10 rows */
+    overflow-y: auto;    /* scrollbar */
+  }
+  
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9; /* alternate row color */
+  }
+  

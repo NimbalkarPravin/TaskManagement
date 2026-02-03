@@ -199,3 +199,16 @@
   max-width: 300px;
   text-align: center;
 }
+
+
+.leave-cell {
+  width: 100%;              /* Fill the parent td */
+  text-align: center;
+  vertical-align: middle;
+  background-color: #e59b40;
+  height: 107px;
+  display: flex;            /* Flexbox for centering */
+  align-items: center;      /* Vertical center */
+  justify-content: center;  /* Horizontal center */
+}
+

@@ -8,12 +8,18 @@ import { AppComponent } from './app.component';
 import { EmployeeService } from './services/employee.service';
 import { SharedService } from './services/shared.service';
 import { TaskdashboardComponent } from './taskDashboard/taskdashboard/taskdashboard.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { TasksComponent } from './tasks/tasks.component';
+import { EmployeesComponent } from './employees/employees.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     appRouting,
-    TaskdashboardComponent
+    TaskdashboardComponent,
+    ProjectsComponent,
+    TasksComponent,
+    EmployeesComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,9 @@
 
-<form [formGroup]="filterform" class="filter-form">
+<div id="alert-container" style="height: 0px; width: 35%;">
+ 
+</div>
+<div>
+<!-- <form [formGroup]="filterform" class="filter-form">
   <div class="form-group">
     <label for="month">Select Month:</label>
     <select id="month" formControlName="month">
@@ -41,7 +45,63 @@
     (click)="openCreateTask()">
     <i class="fas fa-plus"></i> New Task
   </button>
+
+  
+</form> -->
+
+<form [formGroup]="filterform" class="filter-form">
+  <div class="form-group">
+    <label for="month">Select Month:</label>
+    <select id="month" formControlName="month">
+      <option *ngFor="let m of months" [value]="m.value">{{ m.name }}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="year">Select Year:</label>
+    <select id="year" formControlName="year">
+      <option *ngFor="let y of years" [value]="y">{{ y }}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="project">Select Project:</label>
+    <select id="project" formControlName="project">
+      <option value="">All</option>
+      <option *ngFor="let p of projects" [value]="p.name">{{ p.name }}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="employee">Select Employee:</label>
+    <select id="employee" formControlName="employee">
+      <option value="">All</option>
+      <option *ngFor="let e of employees" [value]="e.firstName + ' ' + e.lastName">
+        {{ e.firstName }} {{ e.lastName }}
+      </option>
+    </select>
+  </div>
+
+  <!-- Buttons row -->
+  <div class="d-flex justify-content-end gap-2 mt-2">
+    <button class="btn btn-sm btn-primary" (click)="clearFilters()">
+      <i class="fas fa-times"></i> Clear
+    </button>
+
+    <button class="btn btn-sm btn-primary"
+            data-bs-toggle="modal" data-bs-target="#addEditModal"
+            (click)="openCreateTask()">
+      <i class="fas fa-plus"></i> New Task
+    </button>
+
+    <button class="btn btn-sm btn-success"
+            data-bs-toggle="modal" data-bs-target="#leaveModal"
+            (click)="openCreateTask()">
+      <i class="fas fa-calendar-check"></i> Leave
+    </button>
+  </div>
 </form>
+
 
 <div class="grid-wrapper">
   <table class="task-grid">
@@ -62,19 +122,32 @@
         <ng-container *ngIf="getTasks(e.firstName + ' ' + e.lastName, col.key).length > 0; else emptyCell">
           <div *ngFor="let task of getTasks(e.firstName + ' ' + e.lastName, col.key)" class="task-cell">
             <div class="task-content">
-              <div class="task-details">
-                <strong>Project:</strong> {{ task.projectName }} <br>
-                <strong>Activity Code:</strong> {{ task.activityCode }} <br>
-                <strong>Task:</strong> {{ task.task }} <br>
-                <strong>Hours:</strong> {{ task.hours }} <br>
-                <strong>Status:</strong> {{ task.status }} <br>
-                <strong>Created Date:</strong> {{ task.date | date:'dd/MM/yyyy' }}
-              </div>
-              <button class="btn btn-sm btn-link text-primary"
-                      data-bs-toggle="modal" data-bs-target="#addEditModal"
-                      (click)="editTask(task)">
-                <i class="fas fa-pencil-alt"></i>
-              </button>
+              <!-- Show task details only if status is NOT Leave -->
+            <div class="task-details" *ngIf="task.status !== 'Leave'">
+              <strong>Project:</strong> {{ task.projectName }} <br>
+              <strong>Activity Code:</strong> {{ task.activityCode }} <br>
+              <strong>Task:</strong> {{ task.task }} <br>
+              <strong>Hours:</strong> {{ task.hours }} <br>
+              <strong>Status:</strong> {{ task.status }} <br>
+              <strong>Created Date:</strong> {{ task.date | date:'dd/MM/yyyy' }}
+            </div>
+
+            <!-- Show Leave text if status IS Leave -->
+            <div class="leave-cell" *ngIf="task.status === 'Leave'">
+              Leave
+            </div>
+
+              <div class="d-flex flex-column">
+                <button class="btn btn-sm btn-link text-primary" *ngIf="task.status !== 'Leave'"
+                        data-bs-toggle="modal" data-bs-target="#addEditModal"
+                        (click)="editTask(task)">
+                  <i class="fas fa-pencil-alt"></i>
+                </button>
+                <button class="btn btn-sm btn-link text-danger"
+                        (click)="deleteTask(task)">
+                  <i class="fas fa-trash-alt"></i>
+                </button>
+              </div>              
             </div>
           </div>
           
@@ -94,7 +167,7 @@
 </table>
 </div>
 
-<!-- Modal -->
+<!-- addEditModal Modal -->
 <div class="modal fade" id="addEditModal" tabindex="-1">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
@@ -106,6 +179,21 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
+          <div class="mb-3">
+            <label for="employee">Employee</label>
+            <select id="employee" class="form-control"  formControlName="employee"
+            [ngClass]="{'is-invalid': form.get('employee')?.invalid && form.get('employee')?.touched}"
+             >
+              <option value="">All</option>
+              <option *ngFor="let e of employees" [value]="e.firstName + ' ' + e.lastName">
+                {{ e.firstName }} {{ e.lastName }}
+              </option>
+            </select>
+            <div class="invalid-feedback">
+              Employee selection is required.
+            </div>
+          </div>
+
           <div class="mb-3">
             <label for="project">Project</label>
             <select 
@@ -215,4 +303,51 @@
     </div>
   </div>
 </div>
-<div id="alert-container"></div>
+
+<!-- Leave Modal -->
+<div class="modal fade" id="leaveModal" tabindex="-1">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <form [formGroup]="leaveForm" (ngSubmit)="applyLeave()">
+        <div class="modal-header">
+          <h5 class="modal-title">Apply Leave</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body">
+          <!-- Employee Selection -->
+          <div class="mb-3">
+            <label for="leaveEmployee">Employee</label>
+            <select id="leaveEmployee" class="form-control" formControlName="employee"
+              [ngClass]="{'is-invalid': leaveForm.get('employee')?.invalid && leaveForm.get('employee')?.touched}">
+              <option value="">-- Select Employee --</option>
+              <option *ngFor="let e of employees" [value]="e.firstName + ' ' + e.lastName">
+                {{ e.firstName }} {{ e.lastName }}
+              </option>
+            </select>
+            <div class="invalid-feedback">
+              Employee selection is required.
+            </div>
+          </div>
+
+          <!-- Date Selection -->
+          <div class="mb-3">
+            <label for="leaveDate">Date</label>
+            <input type="date" id="leaveDate" class="form-control" formControlName="date"
+              [ngClass]="{'is-invalid': leaveForm.get('date')?.invalid && leaveForm.get('date')?.touched}">
+            <div class="invalid-feedback">
+              Date is required.
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary" [disabled]="!leaveForm.valid">Apply</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>          
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+</div>

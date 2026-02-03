@@ -40,6 +40,16 @@ export class TaskMasterService {
       })
     );
   }
+
+  deleteTaskMaster(id: number): Observable<any> {
+    return this.http.delete<any>(`${this.apiUrl}TaskMaster/${id}`).pipe(
+      catchError(error => {
+        console.error('Error deleting task master:', error);
+        return of({ success: false, error });
+      })
+    );
+  }
+  
   
 }
 

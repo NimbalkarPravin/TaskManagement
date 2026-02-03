@@ -20,6 +20,8 @@ declare var bootstrap: any;
 export class TaskdashboardComponent implements OnInit, OnDestroy {
   form: FormGroup;
   filterform: FormGroup;
+  leaveForm!: FormGroup;
+
   months = [
     { value: 1, name: 'January' }, { value: 2, name: 'February' },
     { value: 3, name: 'March' },   { value: 4, name: 'April' },
@@ -59,12 +61,17 @@ export class TaskdashboardComponent implements OnInit, OnDestroy {
       month: [new Date().getMonth() + 1],
       year: [new Date().getFullYear()],
       project: ['', Validators.required], 
-      employee: [''],       
+      employee: ['', Validators.required],       
       activityCode: ['', Validators.required], 
       task: ['', Validators.required], 
       hours: ['', [Validators.required, Validators.min(1)]], 
       status: ['', Validators.required],
       date: ['', Validators.required] });
+
+      this.leaveForm = this.fb.group({
+        employee: ['', Validators.required],
+        date: ['', Validators.required]
+      });
   }
 
   ngOnInit(): void {
@@ -152,7 +159,7 @@ export class TaskdashboardComponent implements OnInit, OnDestroy {
   }
     
   saveTask() {
-    if (this.form.valid) {
+    if (this.form.valid) {      
       const updated = { ...this.selectedTask, ...this.form.value };
   
       const project = this.projects.find(p => p.name === updated.project);
@@ -168,16 +175,15 @@ export class TaskdashboardComponent implements OnInit, OnDestroy {
         id: updated.id || 0,
         projectId : projectId,
         taskId : taskId,
-        employeeId : 1,
+        employeeId : employeeId,
         activityCode: updated.activityCode,
         hours: updated.hours,
         status: updated.status,
         isActive: true,
         date: updated.date
       };
-      
-  
-      const request$ = saveModel.id
+     
+  const request$ = saveModel.id
   ? this.taskMasterService.updateTaskMaster(saveModel.id, saveModel)
   : this.taskMasterService.createTaskMaster(saveModel);
 
@@ -203,26 +209,10 @@ request$.subscribe({
       'danger'
     );
   }
-});
-      // this.taskMasterService.createTaskMaster(saveModel).subscribe({
-      //   next: () => {
-      //     this.showAlert('Task updated successfully!', 'success');
-      //     this.loadTaskData();
-      //     // Close modal
-      //     const modalElement = document.getElementById('addEditModal');
-      //     if (modalElement) {
-      //       const modalInstance = bootstrap.Modal.getInstance(modalElement) 
-      //         || new bootstrap.Modal(modalElement);
-      //       modalInstance.hide();
-      //     }
-      //   },
-      //   error: (err) => {
-      //     console.error('Error updating task:', err);
-      //     this.showAlert('Error updating task!', 'danger');
-      //   }
-      // });
+  });     
       
-    }
+ }
+
   }
   
   showAlert(message: string, type: 'success' | 'danger' | 'info' | 'warning') {
@@ -243,7 +233,26 @@ request$.subscribe({
     }, 3000);
   }
   
-  
+  deleteTask(task: any) {   
+    this.taskMasterService.deleteTaskMaster(task.id).subscribe({
+      next: () => {
+        this.showAlert('Task deleted successfully!', 'success');
+        this.loadTaskData();
+        // Close modal
+        const modalElement = document.getElementById('addEditModal');
+        if (modalElement) {
+          const modalInstance = bootstrap.Modal.getInstance(modalElement)
+            || new bootstrap.Modal(modalElement);
+          modalInstance.hide();
+        }
+      },
+      error: (err) => {
+        console.error('Error deleting task:', err);
+        this.showAlert('Error deleting task!', 'danger');
+      }
+    });
+    
+  }
 
   confirmLeave(event: Event) {
     const checkbox = event.target as HTMLInputElement;
@@ -259,7 +268,55 @@ request$.subscribe({
     }
   }
   
-  
+  // applyLeave(): void {
+  //   if (this.leaveForm.valid) {
+  //     const leaveData = this.leaveForm.value;
+      
+  //     this.leaveForm.reset();
+  //   } else {
+  //     this.leaveForm.markAllAsTouched();
+  //   }
+  // }
+
+  applyLeave() {
+    if (this.leaveForm.valid) {     
+      const updated = { ...this.selectedTask, ...this.leaveForm.value };
+        const employeeId = this.employees.find(
+        e => `${e.firstName} ${e.lastName}` === updated.employee
+      )?.id || 0;
+ 
+      const saveModel: SaveTaskModel = {
+        id: 0,
+        projectId : 1,
+        taskId : 1,
+        employeeId : employeeId,
+        activityCode: 'Leave',
+        hours: 1,
+        status: 'Leave',
+        isActive: true,
+        date: updated.date
+      };
+     debugger;
+		this.taskMasterService.createTaskMaster(saveModel).subscribe({
+		  next: () => {
+			this.showAlert('Leave apply successfully!','success');
+			this.loadTaskData();
+			// Close modal
+			const modalElement = document.getElementById('leaveModal');
+			if (modalElement) {
+			  const modalInstance = bootstrap.Modal.getInstance(modalElement)
+				|| new bootstrap.Modal(modalElement);
+			  modalInstance.hide();
+			}
+		  },
+		  error: (err) => {
+			console.error('Error in leave apply:', err);
+			this.showAlert('Error in leave apply:','danger');
+			}
+		});     
+		  
+	} 
+}
 
   clearFilters(): void {
     this.filterform.reset({

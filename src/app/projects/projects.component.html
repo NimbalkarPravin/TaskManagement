@@ -1,0 +1,79 @@
+<div class="container mt-3">
+    <h3>Projects</h3>
+  
+    <button class="btn btn-sm btn-primary mb-2" (click)="openCreateProject()" data-bs-toggle="modal" data-bs-target="#projectModal">
+      <i class="fas fa-plus"></i> New Project
+    </button>
+  
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Created Date</th>
+          <th>Modified Date</th>
+          <th>Status</th>
+          <th>Is Active</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let project of projects">
+          <td>{{ project.id }}</td>
+          <td>{{ project.name }}</td>
+          <td>{{ project.createdDate | date:'dd/MM/yyyy' }}</td>
+          <td>{{ project.modifiedDate | date:'dd/MM/yyyy' }}</td>
+          <td>{{ project.status }}</td>
+          <td>{{ project.isActive ? 'Yes' : 'No' }}</td>
+          <td>
+            <button class="btn btn-sm btn-info me-1" (click)="editProject(project)" data-bs-toggle="modal" data-bs-target="#projectModal">
+              <i class="fas fa-pencil-alt"></i>
+            </button>
+            <button class="btn btn-sm btn-danger" (click)="deleteProject(project.id)">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <!-- Project Modal -->
+  <div class="modal fade" id="projectModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content" *ngIf="selectedProject">
+        <div class="modal-header">
+          <h5 class="modal-title">{{ mode === 'create' ? 'Create Project' : 'Edit Project' }}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label>Name</label>
+            <input type="text" class="form-control" [(ngModel)]="selectedProject.name">
+          </div>
+          <div class="mb-3">
+            <label>Status</label>
+            <select class="form-control" [(ngModel)]="selectedProject.status">
+              <option>Open</option>
+              <option>In Progress</option>
+              <option>Completed</option>
+              <option>On Hold</option>
+              <option>Cancelled</option>
+            </select>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" [(ngModel)]="selectedProject.isActive">
+            <label class="form-check-label">Is Active</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" (click)="saveProject()" data-bs-dismiss="modal">Save</button>
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="alertMessage" class="alert alert-{{alertType}} alert-dismissible fade show" role="alert">
+    {{ alertMessage }}
+  </div>
+  

@@ -1,0 +1,75 @@
+<div class="container mt-3">
+    <h3>Employees</h3>
+  
+    <!-- Alert -->
+    <div *ngIf="alertMessage" class="alert alert-{{alertType}}">{{ alertMessage }}</div>
+  
+    <button class="btn btn-sm btn-primary mb-2" (click)="openCreateEmployee()" data-bs-toggle="modal" data-bs-target="#employeeModal">
+      <i class="fas fa-plus"></i> New Employee
+    </button>
+  
+    <div class="employee-table-wrapper">
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Created Date</th>
+            <th>Modified Date</th>
+            <th>Is Active</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let emp of employees">
+            <td>{{ emp.id }}</td>
+            <td>{{ emp.firstName }}</td>
+            <td>{{ emp.lastName }}</td>
+            <td>{{ emp.createdDate | date:'dd/MM/yyyy' }}</td>
+            <td>{{ emp.modifiedDate | date:'dd/MM/yyyy' }}</td>
+            <td>{{ emp.isActive ? 'Yes' : 'No' }}</td>
+            <td>
+              <button class="btn btn-sm btn-info me-1" (click)="editEmployee(emp)" data-bs-toggle="modal" data-bs-target="#employeeModal">
+                <i class="fas fa-pencil-alt"></i>
+              </button>
+              <button class="btn btn-sm btn-danger" (click)="deleteEmployee(emp.id)">
+                <i class="fas fa-trash-alt"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  <!-- Employee Modal -->
+  <div class="modal fade" id="employeeModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content" *ngIf="selectedEmployee">
+        <div class="modal-header">
+          <h5 class="modal-title">{{ mode === 'create' ? 'Create Employee' : 'Edit Employee' }}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label>First Name</label>
+            <input type="text" class="form-control" [(ngModel)]="selectedEmployee.firstName">
+          </div>
+          <div class="mb-3">
+            <label>Last Name</label>
+            <input type="text" class="form-control" [(ngModel)]="selectedEmployee.lastName">
+          </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" [(ngModel)]="selectedEmployee.isActive">
+            <label class="form-check-label">Is Active</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" (click)="saveEmployee()" data-bs-dismiss="modal">Save</button>
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
