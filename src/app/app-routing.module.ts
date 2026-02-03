@@ -8,9 +8,8 @@ import { TasksComponent } from './tasks/tasks.component';
 import { EmployeesComponent } from './employees/employees.component';
 
 const routes: Routes = [
-  // { path: '', redirectTo: '/index', pathMatch: 'full' },
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  {path: 'dashboard', component: TaskdashboardComponent},
+  { path: 'dashboard', component: TaskdashboardComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'tasks', component: TasksComponent },
   { path: 'employees', component: EmployeesComponent },
@@ -18,8 +17,12 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    // 👇 this is where you add useHash: true
+    RouterModule.forRoot(routes, { useHash: true })
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const appRouting = [HeaderComponent, PageNotFoundComponent] 
+
+export const appRouting = [HeaderComponent, PageNotFoundComponent];
